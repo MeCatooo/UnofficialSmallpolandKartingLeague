@@ -1,0 +1,18 @@
+:host{
+  height: 100%;
+  display: block;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav {
+  width: 15%;
+  min-width: 400px;
+  max-width: 800px;
+}
