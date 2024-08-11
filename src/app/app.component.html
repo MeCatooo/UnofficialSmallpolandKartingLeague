@@ -6,7 +6,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <p>
+      <p class="header">
         <button mat-button (click)="sidenav.toggle()">
           <mat-icon
             aria-hidden="false"
@@ -15,8 +15,10 @@
           ></mat-icon>
         </button>
       </p>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
+
 </main>
 <div *ngIf="!isValid">
   This page is only for mobile devices

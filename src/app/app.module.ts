@@ -10,12 +10,14 @@ import {FormsModule} from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
-  ],
+      HomeComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
