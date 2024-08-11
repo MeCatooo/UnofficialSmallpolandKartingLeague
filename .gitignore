@@ -43,3 +43,8 @@ Thumbs.db
 firebase-debug.log
 /.firebase
 /.vscode
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
