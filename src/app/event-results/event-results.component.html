@@ -1,1 +1,28 @@
-<p>event-results works!</p>
+
+<div *ngIf="event" class="event-results-container">
+  <h1>{{ event?.Name }} - Results</h1>
+  <p>{{ event?.Description }}</p>
+  <p>Date: {{ event?.Date | date }}</p>
+  <p>Track: {{ event?.Track }}</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Name</th>
+        <th>Time</th>
+        <th *ngIf="event?.Results?.length && isRaceResult(event?.Results[0])">Starting Position</th>
+        <th *ngIf="event?.Results?.length && isRaceResult(event?.Results[0])">Qualifying Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of event?.Results; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ result?.Driver?.Name }} {{ result?.Driver?.LastName }} ({{ result?.Driver?.NickName }})</td>
+        <td>{{ result?.BestLap() | number:'1.3-3' }} seconds</td>
+        <td *ngIf="isRaceResult(result)">{{ result?.StartingPosition }}</td>
+        <td *ngIf="isRaceResult(result)">{{ result?.QualificationTime | number:'1.3-3' }} seconds</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

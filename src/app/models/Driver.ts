@@ -6,14 +6,13 @@ export class Driver {
   NickName: string;
   Description: string;
   Id: number;
-  Results: Result[];
 
-  constructor(name: string, lastName: string, nickName: string, description: string, Id: number, results: Result[]) {
+  constructor(name: string, lastName: string, nickName: string, description: string, Id: number) {
     this.Name = name;
     this.LastName = lastName;
     this.NickName = nickName;
     this.Description = description;
     this.Id = Id;
-    this.Results = results;
+
   }
 }

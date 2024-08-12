@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Event } from '../models/Event';
+import { RaceResult } from '../models/RaceResult';
+import { Result } from '../models/Result';
 
 @Component({
   selector: 'app-event-results',
-  standalone: true,
-  imports: [],
   templateUrl: './event-results.component.html',
-  styleUrl: './event-results.component.scss'
+  styleUrls: ['./event-results.component.css']
 })
-export class EventResultsComponent {
+export class EventResultsComponent implements OnInit {
 
+  @Input() event?: Event;
+
+  constructor() { }
+
+  ngOnInit(): void { }
+
+  isRaceResult(result: Result): boolean {
+    return 'StartingPosition' in result && 'QualificationTime' in result;
+  }
 }

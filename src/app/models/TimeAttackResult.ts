@@ -7,15 +7,13 @@ class TimeAttackResult implements Result {
   Description: string;
   Id: number;
   Driver: Driver;
-  Track: Track;
   Times: number[];
 
-  constructor(name: string, description: string, Id: number, driver: Driver, track: Track, times: number[]) {
+  constructor(name: string, description: string, Id: number, driver: Driver, times: number[]) {
     this.Name = name;
     this.Description = description;
     this.Id = Id;
     this.Driver = driver;
-    this.Track = track;
     this.Times = times;
   }
 

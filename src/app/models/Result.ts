@@ -6,7 +6,6 @@ export interface Result {
   Description: string;
   Id: number;
   Driver: Driver;
-  Track: Track;
   Times: number[];
 
   BestLap(): number | null;
