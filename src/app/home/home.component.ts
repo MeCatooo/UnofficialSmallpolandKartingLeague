@@ -1,3 +1,5 @@
+import { take } from 'rxjs';
+import { Driver } from '../models/Driver';
 import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -14,7 +16,9 @@ export class HomeComponent implements OnInit {
   }
 
   addTest(){
-    this.dataService.createRobot('123', '123', '123')
+    var test = new Driver()
+    test.Name = "Name"
+    this.dataService.writeData(test)
   }
 
 }

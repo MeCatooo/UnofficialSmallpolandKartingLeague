@@ -6,7 +6,7 @@ import { Result } from '../models/Result';
 @Component({
   selector: 'app-event-results',
   templateUrl: './event-results.component.html',
-  styleUrls: ['./event-results.component.css']
+  styleUrls: ['./event-results.component.scss']
 })
 export class EventResultsComponent implements OnInit {
 

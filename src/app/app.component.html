@@ -2,7 +2,13 @@
   <app-header></app-header>
   <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-      Sidenav content
+      <div>
+        <h2>SmallPoland Karting App</h2>
+        <h3>UnOficial</h3>
+      </div>
+      <div>
+        <div routerLink="events">Events</div>
+      </div>
     </mat-sidenav>
 
     <mat-sidenav-content>
