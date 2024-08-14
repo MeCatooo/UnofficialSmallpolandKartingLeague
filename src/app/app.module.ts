@@ -17,7 +17,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { EventResultsComponent } from './event-results/event-results.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { TrackListComponent } from './track/track-list/track-list.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import { TrackListComponent } from './track/track-list/track-list.component';
     BrowserAnimationsModule,
     CommonModule,
     MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule, MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [
     provideFirebaseApp(() => initializeApp({"projectId":"smallpolandkartingleague","appId":"1:290670666019:web:adb102dbd5bfa21c456c96","storageBucket":"smallpolandkartingleague.appspot.com","apiKey":"AIzaSyDvb5ljr6BR28j5LCB8oM1fjQy9zIWkMX8","authDomain":"smallpolandkartingleague.firebaseapp.com","messagingSenderId":"290670666019"})),

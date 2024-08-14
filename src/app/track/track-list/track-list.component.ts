@@ -3,11 +3,11 @@ import { addDoc, collection, collectionData, DocumentReference, Firestore } from
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Track } from 'src/app/models/Track';
-
+import {MatTableModule} from '@angular/material/table';
 @Component({
   selector: 'app-track-list',
   templateUrl: './track-list.component.html',
-  styleUrls: ['./track-list.component.css']
+  styleUrls: ['./track-list.component.css'],
 })
 export class TrackListComponent implements OnInit {
   trackForm = new FormGroup({
@@ -15,6 +15,7 @@ export class TrackListComponent implements OnInit {
     Description: new FormControl('')
   })
   tracks: Observable<Track[]> | null = null
+  displayedColumns = ['Name',  'TrackRecord', 'RecordHolder']
   constructor(public firestore: Firestore) { }
 
   ngOnInit() {
